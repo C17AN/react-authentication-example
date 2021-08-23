@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+const styleSheet = {};
+
+const style = {
+  container: {
+    minWidth: "400px",
+  },
+  formContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  label: {
+    fontSize: "1.1rem",
+    marginTop: "16px",
+    marginBottom: "2px",
+  },
+  button: {
+    marginTop: "12px",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style.container}>
+      <form style={style.formContainer}>
+        <label htmlFor="id" style={style.label}>
+          이메일
+        </label>
+        <input type="text" name="" id="id" />
+        <label htmlFor="password" style={style.label}>
+          패스워드
+        </label>
+        <input type="password" id="password" />
+        <button style={style.button}>로그인</button>
+      </form>
     </div>
   );
 }
